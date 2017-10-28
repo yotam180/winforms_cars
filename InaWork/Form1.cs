@@ -119,5 +119,78 @@ namespace InaWork
         {
             button8_Click(null, null);
         }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            Pen p = new Pen(Brushes.Black, 2);
+            Font textFont = new Font("Times New Roman", 14);
+            Font titleFont = new Font("Arial", 24, FontStyle.Underline | FontStyle.Bold);
+
+            e.Graphics.DrawString(DateTime.Now.ToLongDateString(), textFont, Brushes.Black, new Point(0, 0));
+            e.Graphics.DrawString("דו\"ח נהגים", titleFont, Brushes.Black, new Point(0, 100));
+
+            int w = 100, h = 400, j, i;
+            for (i = 0; i < driversDataGridView.Columns.Count; i++, w += 100)
+            {
+                e.Graphics.FillRectangle(Brushes.LightGray, new Rectangle(w, h, driversDataGridView.Columns[0].Width, driversDataGridView.Rows[0].Height));
+                e.Graphics.DrawRectangle(p, new Rectangle(w, h, driversDataGridView.Columns[0].Width, driversDataGridView.Rows[0].Height));
+                e.Graphics.DrawString(driversDataGridView.Columns[i].HeaderText.ToString(), textFont, Brushes.Black, new Rectangle(w, h, driversDataGridView.Columns[0].Width, driversDataGridView.Rows[0].Height));
+            }
+
+            w = 100;
+            h += 22;
+            for (i = 0; i < driversDataGridView.Rows.Count - 1; i++, h += 22)
+            {
+                for (j = 0, w = 100; j < driversDataGridView.Columns.Count; j++, w += 100)
+                {
+                    e.Graphics.DrawRectangle(p, new Rectangle(w, h, driversDataGridView.Columns[0].Width, driversDataGridView.Rows[0].Height));
+                    e.Graphics.DrawString(driversDataGridView.Rows[i].Cells[j].FormattedValue.ToString(), driversDataGridView.Font, Brushes.Black, new Rectangle(w, h, driversDataGridView.Columns[0].Width, driversDataGridView.Rows[0].Height));
+                }
+            }
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            pageSetupDialog1.ShowDialog();
+            printPreviewDialog1.ShowDialog();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            if (printDialog1.ShowDialog().Equals(DialogResult.OK))
+            {
+                printDocument1.Print();
+            }
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            if (printDialog2.ShowDialog().Equals(DialogResult.OK))
+            {
+                printDocument2.Print();
+            }
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            pageSetupDialog2.ShowDialog();
+            printPreviewDialog2.ShowDialog();
+        }
+
+        private void printDocument2_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            Pen p = new Pen(Brushes.Black, 2);
+            Font textFont = new Font("Times New Roman", 14);
+            Font titleFont = new Font("Arial", 24, FontStyle.Underline | FontStyle.Bold);
+
+            e.Graphics.DrawString(DateTime.Now.ToLongDateString(), textFont, Brushes.Black, new Point(0, 0));
+            e.Graphics.DrawString("דו\"ח נהג", titleFont, Brushes.Black, new Point(0, 100));
+
+            for (int i = 0; i < driversDataGridView.Columns.Count; i++)
+            {
+                e.Graphics.DrawString(driversDataGridView.Columns[i].HeaderText, textFont, Brushes.Black, new Point(10, 200 + 50 * i));
+                e.Graphics.DrawString(driversDataGridView.CurrentRow.Cells[i].FormattedValue.ToString(), textFont, Brushes.Black, new Point(200, 200 + 50 * i));
+            }
+        }
     }
 }
