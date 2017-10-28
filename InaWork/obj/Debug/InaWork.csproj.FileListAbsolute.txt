@@ -1,0 +1,9 @@
+C:\Users\yotam\Documents\Visual Studio 2017\Projects\InaWork\InaWork\obj\Debug\InaWork.csprojResolveAssemblyReference.cache
+C:\Users\yotam\Documents\Visual Studio 2017\Projects\InaWork\InaWork\obj\Debug\InaWork.Form1.resources
+C:\Users\yotam\Documents\Visual Studio 2017\Projects\InaWork\InaWork\obj\Debug\InaWork.Properties.Resources.resources
+C:\Users\yotam\Documents\Visual Studio 2017\Projects\InaWork\InaWork\obj\Debug\InaWork.csproj.GenerateResource.Cache
+C:\Users\yotam\Documents\Visual Studio 2017\Projects\InaWork\InaWork\bin\Debug\InaWork.exe.config
+C:\Users\yotam\Documents\Visual Studio 2017\Projects\InaWork\InaWork\bin\Debug\InaWork.exe
+C:\Users\yotam\Documents\Visual Studio 2017\Projects\InaWork\InaWork\bin\Debug\InaWork.pdb
+C:\Users\yotam\Documents\Visual Studio 2017\Projects\InaWork\InaWork\obj\Debug\InaWork.exe
+C:\Users\yotam\Documents\Visual Studio 2017\Projects\InaWork\InaWork\obj\Debug\InaWork.pdb
