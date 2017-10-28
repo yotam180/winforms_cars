@@ -214,5 +214,25 @@ namespace InaWork
 
             driversDataGridView.DataSource = driversBindingSource;
         }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            (driversDataGridView.DataSource as BindingSource).Filter = "FullName LIKE '%" + textBox3.Text + "%'";
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            (driversDataGridView.DataSource as BindingSource).Filter = "1 = 1";
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            (driversDataGridView.DataSource as BindingSource).Filter = "ID LIKE '%" + textBox3.Text + "%'";
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            new Form2().Show();
+        }
     }
 }
