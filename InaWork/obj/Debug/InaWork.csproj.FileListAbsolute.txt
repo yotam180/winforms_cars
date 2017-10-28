@@ -7,3 +7,4 @@ C:\Users\yotam\Documents\Visual Studio 2017\Projects\InaWork\InaWork\bin\Debug\I
 C:\Users\yotam\Documents\Visual Studio 2017\Projects\InaWork\InaWork\bin\Debug\InaWork.pdb
 C:\Users\yotam\Documents\Visual Studio 2017\Projects\InaWork\InaWork\obj\Debug\InaWork.exe
 C:\Users\yotam\Documents\Visual Studio 2017\Projects\InaWork\InaWork\obj\Debug\InaWork.pdb
+C:\Users\yotam\Documents\Visual Studio 2017\Projects\InaWork\InaWork\obj\Debug\InaWork.Form2.resources
