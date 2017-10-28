@@ -37,14 +37,20 @@
             System.Windows.Forms.Label licenseIDLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.driversDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.driversBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.databaseDataSet = new InaWork.DatabaseDataSet();
             this.iDMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.fullNameTextBox = new System.Windows.Forms.TextBox();
             this.birthDateDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.addressTextBox = new System.Windows.Forms.TextBox();
             this.phoneNumberMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.licenseIDMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
-            this.driversBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.databaseDataSet = new InaWork.DatabaseDataSet();
             this.driversTableAdapter = new InaWork.DatabaseDataSetTableAdapters.DriversTableAdapter();
             this.tableAdapterManager = new InaWork.DatabaseDataSetTableAdapters.TableAdapterManager();
             this.button1 = new System.Windows.Forms.Button();
@@ -58,15 +64,9 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
-            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.button11 = new System.Windows.Forms.Button();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button12 = new System.Windows.Forms.Button();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.printDocument2 = new System.Drawing.Printing.PrintDocument();
@@ -75,6 +75,14 @@
             this.printPreviewDialog2 = new System.Windows.Forms.PrintPreviewDialog();
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.printDocument3 = new System.Drawing.Printing.PrintDocument();
+            this.pageSetupDialog3 = new System.Windows.Forms.PageSetupDialog();
+            this.printDialog3 = new System.Windows.Forms.PrintDialog();
+            this.printPreviewDialog3 = new System.Windows.Forms.PrintPreviewDialog();
+            this.button16 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             iDLabel = new System.Windows.Forms.Label();
             fullNameLabel = new System.Windows.Forms.Label();
             birthDateLabel = new System.Windows.Forms.Label();
@@ -85,6 +93,60 @@
             ((System.ComponentModel.ISupportInitialize)(this.driversBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
             this.SuspendLayout();
+            // 
+            // iDLabel
+            // 
+            iDLabel.AutoSize = true;
+            iDLabel.Location = new System.Drawing.Point(12, 241);
+            iDLabel.Name = "iDLabel";
+            iDLabel.Size = new System.Drawing.Size(67, 13);
+            iDLabel.TabIndex = 1;
+            iDLabel.Text = "תעודת זהות";
+            // 
+            // fullNameLabel
+            // 
+            fullNameLabel.AutoSize = true;
+            fullNameLabel.Location = new System.Drawing.Point(12, 267);
+            fullNameLabel.Name = "fullNameLabel";
+            fullNameLabel.Size = new System.Drawing.Size(48, 13);
+            fullNameLabel.TabIndex = 3;
+            fullNameLabel.Text = "שם מלא";
+            // 
+            // birthDateLabel
+            // 
+            birthDateLabel.AutoSize = true;
+            birthDateLabel.Location = new System.Drawing.Point(12, 294);
+            birthDateLabel.Name = "birthDateLabel";
+            birthDateLabel.Size = new System.Drawing.Size(69, 13);
+            birthDateLabel.TabIndex = 5;
+            birthDateLabel.Text = "תאריך לידה";
+            // 
+            // addressLabel
+            // 
+            addressLabel.AutoSize = true;
+            addressLabel.Location = new System.Drawing.Point(12, 319);
+            addressLabel.Name = "addressLabel";
+            addressLabel.Size = new System.Drawing.Size(40, 13);
+            addressLabel.TabIndex = 7;
+            addressLabel.Text = "כתובת";
+            // 
+            // phoneNumberLabel
+            // 
+            phoneNumberLabel.AutoSize = true;
+            phoneNumberLabel.Location = new System.Drawing.Point(12, 345);
+            phoneNumberLabel.Name = "phoneNumberLabel";
+            phoneNumberLabel.Size = new System.Drawing.Size(68, 13);
+            phoneNumberLabel.TabIndex = 9;
+            phoneNumberLabel.Text = "מספר טלפון";
+            // 
+            // licenseIDLabel
+            // 
+            licenseIDLabel.AutoSize = true;
+            licenseIDLabel.Location = new System.Drawing.Point(12, 371);
+            licenseIDLabel.Name = "licenseIDLabel";
+            licenseIDLabel.Size = new System.Drawing.Size(67, 13);
+            licenseIDLabel.TabIndex = 11;
+            licenseIDLabel.Text = "מספר רשיון";
             // 
             // driversDataGridView
             // 
@@ -103,110 +165,41 @@
             this.driversDataGridView.Size = new System.Drawing.Size(750, 213);
             this.driversDataGridView.TabIndex = 1;
             // 
-            // iDLabel
+            // dataGridViewTextBoxColumn1
             // 
-            iDLabel.AutoSize = true;
-            iDLabel.Location = new System.Drawing.Point(12, 241);
-            iDLabel.Name = "iDLabel";
-            iDLabel.Size = new System.Drawing.Size(67, 13);
-            iDLabel.TabIndex = 1;
-            iDLabel.Text = "תעודת זהות";
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ת\"ז";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
-            // iDMaskedTextBox
+            // dataGridViewTextBoxColumn2
             // 
-            this.iDMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.driversBindingSource, "ID", true));
-            this.iDMaskedTextBox.Location = new System.Drawing.Point(99, 238);
-            this.iDMaskedTextBox.Mask = "000000000";
-            this.iDMaskedTextBox.Name = "iDMaskedTextBox";
-            this.iDMaskedTextBox.Size = new System.Drawing.Size(200, 20);
-            this.iDMaskedTextBox.TabIndex = 2;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "FullName";
+            this.dataGridViewTextBoxColumn2.HeaderText = "שם מלא";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
-            // fullNameLabel
+            // dataGridViewTextBoxColumn3
             // 
-            fullNameLabel.AutoSize = true;
-            fullNameLabel.Location = new System.Drawing.Point(12, 267);
-            fullNameLabel.Name = "fullNameLabel";
-            fullNameLabel.Size = new System.Drawing.Size(48, 13);
-            fullNameLabel.TabIndex = 3;
-            fullNameLabel.Text = "שם מלא";
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "BirthDate";
+            this.dataGridViewTextBoxColumn3.HeaderText = "תאריך לידה";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
-            // fullNameTextBox
+            // dataGridViewTextBoxColumn4
             // 
-            this.fullNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.driversBindingSource, "FullName", true));
-            this.fullNameTextBox.Location = new System.Drawing.Point(99, 264);
-            this.fullNameTextBox.Name = "fullNameTextBox";
-            this.fullNameTextBox.Size = new System.Drawing.Size(200, 20);
-            this.fullNameTextBox.TabIndex = 4;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Address";
+            this.dataGridViewTextBoxColumn4.HeaderText = "כתובת";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
-            // birthDateLabel
+            // dataGridViewTextBoxColumn5
             // 
-            birthDateLabel.AutoSize = true;
-            birthDateLabel.Location = new System.Drawing.Point(12, 294);
-            birthDateLabel.Name = "birthDateLabel";
-            birthDateLabel.Size = new System.Drawing.Size(69, 13);
-            birthDateLabel.TabIndex = 5;
-            birthDateLabel.Text = "תאריך לידה";
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "PhoneNumber";
+            this.dataGridViewTextBoxColumn5.HeaderText = "טלפון";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
-            // birthDateDateTimePicker
+            // dataGridViewTextBoxColumn6
             // 
-            this.birthDateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.driversBindingSource, "BirthDate", true));
-            this.birthDateDateTimePicker.Location = new System.Drawing.Point(99, 290);
-            this.birthDateDateTimePicker.Name = "birthDateDateTimePicker";
-            this.birthDateDateTimePicker.Size = new System.Drawing.Size(200, 20);
-            this.birthDateDateTimePicker.TabIndex = 6;
-            // 
-            // addressLabel
-            // 
-            addressLabel.AutoSize = true;
-            addressLabel.Location = new System.Drawing.Point(12, 319);
-            addressLabel.Name = "addressLabel";
-            addressLabel.Size = new System.Drawing.Size(40, 13);
-            addressLabel.TabIndex = 7;
-            addressLabel.Text = "כתובת";
-            // 
-            // addressTextBox
-            // 
-            this.addressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.driversBindingSource, "Address", true));
-            this.addressTextBox.Location = new System.Drawing.Point(99, 316);
-            this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(200, 20);
-            this.addressTextBox.TabIndex = 8;
-            // 
-            // phoneNumberLabel
-            // 
-            phoneNumberLabel.AutoSize = true;
-            phoneNumberLabel.Location = new System.Drawing.Point(12, 345);
-            phoneNumberLabel.Name = "phoneNumberLabel";
-            phoneNumberLabel.Size = new System.Drawing.Size(68, 13);
-            phoneNumberLabel.TabIndex = 9;
-            phoneNumberLabel.Text = "מספר טלפון";
-            // 
-            // phoneNumberMaskedTextBox
-            // 
-            this.phoneNumberMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.driversBindingSource, "PhoneNumber", true));
-            this.phoneNumberMaskedTextBox.Location = new System.Drawing.Point(99, 342);
-            this.phoneNumberMaskedTextBox.Mask = "0000000000";
-            this.phoneNumberMaskedTextBox.Name = "phoneNumberMaskedTextBox";
-            this.phoneNumberMaskedTextBox.Size = new System.Drawing.Size(200, 20);
-            this.phoneNumberMaskedTextBox.TabIndex = 10;
-            // 
-            // licenseIDLabel
-            // 
-            licenseIDLabel.AutoSize = true;
-            licenseIDLabel.Location = new System.Drawing.Point(12, 371);
-            licenseIDLabel.Name = "licenseIDLabel";
-            licenseIDLabel.Size = new System.Drawing.Size(67, 13);
-            licenseIDLabel.TabIndex = 11;
-            licenseIDLabel.Text = "מספר רשיון";
-            // 
-            // licenseIDMaskedTextBox
-            // 
-            this.licenseIDMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.driversBindingSource, "LicenseID", true));
-            this.licenseIDMaskedTextBox.Location = new System.Drawing.Point(99, 368);
-            this.licenseIDMaskedTextBox.Mask = "0000000";
-            this.licenseIDMaskedTextBox.Name = "licenseIDMaskedTextBox";
-            this.licenseIDMaskedTextBox.Size = new System.Drawing.Size(200, 20);
-            this.licenseIDMaskedTextBox.TabIndex = 12;
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "LicenseID";
+            this.dataGridViewTextBoxColumn6.HeaderText = "מספר רשיון";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
             // driversBindingSource
             // 
@@ -217,6 +210,57 @@
             // 
             this.databaseDataSet.DataSetName = "DatabaseDataSet";
             this.databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // iDMaskedTextBox
+            // 
+            this.iDMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.driversBindingSource, "ID", true));
+            this.iDMaskedTextBox.Location = new System.Drawing.Point(99, 238);
+            this.iDMaskedTextBox.Mask = "000000000";
+            this.iDMaskedTextBox.Name = "iDMaskedTextBox";
+            this.iDMaskedTextBox.Size = new System.Drawing.Size(200, 20);
+            this.iDMaskedTextBox.TabIndex = 2;
+            // 
+            // fullNameTextBox
+            // 
+            this.fullNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.driversBindingSource, "FullName", true));
+            this.fullNameTextBox.Location = new System.Drawing.Point(99, 264);
+            this.fullNameTextBox.Name = "fullNameTextBox";
+            this.fullNameTextBox.Size = new System.Drawing.Size(200, 20);
+            this.fullNameTextBox.TabIndex = 4;
+            // 
+            // birthDateDateTimePicker
+            // 
+            this.birthDateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.driversBindingSource, "BirthDate", true));
+            this.birthDateDateTimePicker.Location = new System.Drawing.Point(99, 290);
+            this.birthDateDateTimePicker.Name = "birthDateDateTimePicker";
+            this.birthDateDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.birthDateDateTimePicker.TabIndex = 6;
+            // 
+            // addressTextBox
+            // 
+            this.addressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.driversBindingSource, "Address", true));
+            this.addressTextBox.Location = new System.Drawing.Point(99, 316);
+            this.addressTextBox.Name = "addressTextBox";
+            this.addressTextBox.Size = new System.Drawing.Size(200, 20);
+            this.addressTextBox.TabIndex = 8;
+            // 
+            // phoneNumberMaskedTextBox
+            // 
+            this.phoneNumberMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.driversBindingSource, "PhoneNumber", true));
+            this.phoneNumberMaskedTextBox.Location = new System.Drawing.Point(99, 342);
+            this.phoneNumberMaskedTextBox.Mask = "0000000000";
+            this.phoneNumberMaskedTextBox.Name = "phoneNumberMaskedTextBox";
+            this.phoneNumberMaskedTextBox.Size = new System.Drawing.Size(200, 20);
+            this.phoneNumberMaskedTextBox.TabIndex = 10;
+            // 
+            // licenseIDMaskedTextBox
+            // 
+            this.licenseIDMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.driversBindingSource, "LicenseID", true));
+            this.licenseIDMaskedTextBox.Location = new System.Drawing.Point(99, 368);
+            this.licenseIDMaskedTextBox.Mask = "0000000";
+            this.licenseIDMaskedTextBox.Name = "licenseIDMaskedTextBox";
+            this.licenseIDMaskedTextBox.Size = new System.Drawing.Size(200, 20);
+            this.licenseIDMaskedTextBox.TabIndex = 12;
             // 
             // driversTableAdapter
             // 
@@ -332,6 +376,10 @@
             // 
             this.pageSetupDialog1.Document = this.printDocument1;
             // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
             // printPreviewDialog1
             // 
             this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
@@ -343,10 +391,6 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
-            // printDocument1
-            // 
-            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
-            // 
             // button11
             // 
             this.button11.Location = new System.Drawing.Point(330, 325);
@@ -356,42 +400,6 @@
             this.button11.Text = "תצוגה מקדימה";
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ת\"ז";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "FullName";
-            this.dataGridViewTextBoxColumn2.HeaderText = "שם מלא";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "BirthDate";
-            this.dataGridViewTextBoxColumn3.HeaderText = "תאריך לידה";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Address";
-            this.dataGridViewTextBoxColumn4.HeaderText = "כתובת";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "PhoneNumber";
-            this.dataGridViewTextBoxColumn5.HeaderText = "טלפון";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "LicenseID";
-            this.dataGridViewTextBoxColumn6.HeaderText = "מספר רשיון";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
             // button12
             // 
@@ -452,11 +460,69 @@
             this.button14.UseVisualStyleBackColor = true;
             this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
+            // button15
+            // 
+            this.button15.Location = new System.Drawing.Point(411, 383);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(75, 23);
+            this.button15.TabIndex = 27;
+            this.button15.Text = "מקום";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(330, 385);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(75, 20);
+            this.textBox1.TabIndex = 28;
+            // 
+            // pageSetupDialog3
+            // 
+            this.pageSetupDialog3.Document = this.printDocument3;
+            // 
+            // printDialog3
+            // 
+            this.printDialog3.Document = this.printDocument3;
+            this.printDialog3.UseEXDialog = true;
+            // 
+            // printPreviewDialog3
+            // 
+            this.printPreviewDialog3.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog3.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog3.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog3.Document = this.printDocument3;
+            this.printPreviewDialog3.Enabled = true;
+            this.printPreviewDialog3.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog3.Icon")));
+            this.printPreviewDialog3.Name = "printPreviewDialog3";
+            this.printPreviewDialog3.Visible = false;
+            // 
+            // button16
+            // 
+            this.button16.Location = new System.Drawing.Point(573, 382);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(75, 23);
+            this.button16.TabIndex = 29;
+            this.button16.Text = "שנה";
+            this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(492, 384);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(75, 20);
+            this.textBox2.TabIndex = 30;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 422);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.button16);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button15);
             this.Controls.Add(this.button13);
             this.Controls.Add(this.button14);
             this.Controls.Add(this.button12);
@@ -536,6 +602,14 @@
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog2;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Drawing.Printing.PrintDocument printDocument3;
+        private System.Windows.Forms.PageSetupDialog pageSetupDialog3;
+        private System.Windows.Forms.PrintDialog printDialog3;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog3;
+        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
 

@@ -192,5 +192,27 @@ namespace InaWork
                 e.Graphics.DrawString(driversDataGridView.CurrentRow.Cells[i].FormattedValue.ToString(), textFont, Brushes.Black, new Point(200, 200 + 50 * i));
             }
         }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            DataView dv = new DataView(databaseDataSet.Tables["Drivers"]);
+            dv.RowFilter = "Address LIKE '%" + textBox1.Text + "%'";
+            driversDataGridView.DataSource = dv;
+
+            button11_Click(null, null);
+
+            driversDataGridView.DataSource = driversBindingSource;
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            DataView dv = new DataView(databaseDataSet.Tables["Drivers"]);
+            dv.RowFilter = "BirthDate < '" + new DateTime(int.Parse(textBox2.Text), 1, 1).ToString() + "'";
+            driversDataGridView.DataSource = dv;
+
+            button11_Click(null, null);
+
+            driversDataGridView.DataSource = driversBindingSource;
+        }
     }
 }
